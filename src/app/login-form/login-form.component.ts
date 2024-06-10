@@ -1,23 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-login-form',
+  selector: 'app-signin-form',
   standalone: true,
-  imports:[
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports:[FormsModule],
   templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.css']
+  styleUrls: ['./login-form.component.css'],
 })
-export class LoginFormComponent implements OnInit {
-  loginForm: FormGroup; // Declara la propiedad loginForm como tipo FormGroup
+export class LoginFormComponent{
 
-  ngOnInit() {
-    this.loginForm = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', Validators.required)
-    });
+  User = {
+    Email: '',
+    Name: '',
+    Password: ''
+  }
+
+  saveData(){
+    console.log(this.User.Email)
+    console.log(this.User.Name)
+    console.log(this.User.Password)
   }
 }

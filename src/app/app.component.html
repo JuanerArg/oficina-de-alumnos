@@ -1,5 +1,15 @@
 <main>
-  <app-main-page/>
-  <button routerLink="LoginForm">LogIn</button>
+  <div class="app-header">
+    <button routerLink="LoginForm">LogIn</button>
+    <button routerLink="MainPage">MainPage</button>
+  </div>
+  <div class="app-container">
+    <div class="sidebar">
+      <button class="icon-button">M</button>
+      <button class="icon-button">A</button>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </main>
-<router-outlet/>

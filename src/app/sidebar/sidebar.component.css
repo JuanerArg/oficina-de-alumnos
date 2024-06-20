@@ -1,0 +1,32 @@
+/* sidebar.component.css */
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 10px 0;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .close-button {
+      display: block;
+    }
+  }
+  

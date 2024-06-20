@@ -12,7 +12,6 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
 export class LoginFormComponent{
   //Constructor del grupo de controladores de formulario
   signInForm = new FormGroup({
-    Name: new FormControl('', Validators.required), //Controlador con validadores default
     //Controlador con validadores especificos para la estructura de Email:
     Email: new FormControl('' , [Validators.required, Validators.email]),
     //Controlador con validadores especificos para un minimo de 10 cifras/caracteres:
@@ -21,10 +20,8 @@ export class LoginFormComponent{
 
   handleSubmit(){
     //Imprimimos el tipo de dato del valor del controlador de formulario del grupo signInForm en consola
-    console.log(typeof this.signInForm.value.Name)
-    //Imprimimos el valor del controlador de formulario del grupo signInForm en consola
-    console.log(this.signInForm.value.Name)
     console.log(typeof this.signInForm.value.Email)
+    //Imprimimos el valor del controlador de formulario del grupo signInForm en consola
     console.log(this.signInForm.value.Email)
     console.log(typeof this.signInForm.value.Password)
     console.log(this.signInForm.value.Password)

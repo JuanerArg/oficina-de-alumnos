@@ -5,7 +5,7 @@
   </div>
   <div class="app-container">
     <app-sidebar class="sidebar" (categorySelected)="onCategorySelected($event)"></app-sidebar>
-    <app-sidebar-detail *ngIf="selectedCategory" [category]="selectedCategory" class="sidebar-detail"></app-sidebar-detail>
+    <app-sidebar-detail *ngIf="selectedCategory !== null" [category]="selectedCategory" class="sidebar-detail"></app-sidebar-detail>
     <div class="content">
       <router-outlet></router-outlet>
     </div>

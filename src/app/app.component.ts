@@ -23,9 +23,14 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = 'Oficina de Alumnos'
   selectedCategory: string | null = null;
 
   onCategorySelected(category: string) {
     this.selectedCategory = category;
+    if(this.selectedCategory === 'cerrar'){
+      this.selectedCategory = null;
+    }
   }
+  
 }
